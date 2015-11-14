@@ -11,4 +11,5 @@ Level \ 1 - Middleground | 5 | Elementy bliskiego tła ale ktore NIE wchodza w k
 Level \ 2 - Foreground | 0 | Elementy na scenie które mogą wchodzic w kolizje z graczem takie jak przeciwnicy lub przeszkody
 Render | 0 | Wszystkie pozostałe takie jak kamera, światła itp.
 
+![hierarchia](/Hierarchia.jpg)
 	
