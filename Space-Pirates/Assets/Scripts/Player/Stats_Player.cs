@@ -9,6 +9,7 @@ public class Stats_Player : MonoBehaviour {
     public void Damage(int damageCount)
     {
         health -= damageCount;
+        
 
         if (health <= 0)
         {
