@@ -3,10 +3,12 @@ using System.Collections;
 
 public class Bullet : MonoBehaviour {
 
-    public Vector2 speed = new Vector2(10, 10);
+    public Vector2 speed = new Vector2(10, 1);
     public Vector2 direction = new Vector2(1, 0);
-    public float rangeTime = 1.5f;
+    public float rangeTime = 3.5f;
     public float time;
+    public float erection = 250.0f;
+    public float mass = 10.0f;
     private Vector2 movement;
     Rigidbody2D rigid;
 
@@ -23,6 +25,8 @@ public class Bullet : MonoBehaviour {
         movement = new Vector2(
   speed.x * direction.x,
   speed.y * direction.y);
+        erection -= mass;
+            rigid.AddForce(new Vector2(0, erection), ForceMode2D.Force);
     }
 
     void FixedUpdate()
