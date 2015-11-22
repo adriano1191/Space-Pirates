@@ -6,6 +6,7 @@ public class Movement : MonoBehaviour {
     public float moveSpeed = 2f;
     public Vector2 speed = new Vector2(10, 10);
     Rigidbody2D rigid;
+    private Vector2 playerPosition;
 
 
     void Start () {
@@ -30,7 +31,24 @@ public class Movement : MonoBehaviour {
           speed.x * inputX,
           speed.y * inputY);
 
-
+        //gracz nie moze wyjsc poza obszar kamery
+        playerPosition = gameObject.transform.position;
+        if(playerPosition.y <= -4.4f)
+        {
+            transform.position = new Vector2(transform.position.x, -4.4f);
+        }
+        if (playerPosition.y >= 4.1f)
+        {
+            transform.position = new Vector2(transform.position.x, 4.1f);
+        }
+        if (playerPosition.x <= -7.8f)
+        {
+            transform.position = new Vector2(-7.8f, transform.position.y);
+        }
+        if (playerPosition.x >= 7.7f)
+        {
+            transform.position = new Vector2(7.7f, transform.position.y);
+        }
 
         bool shoot = Input.GetButtonDown("Fire1");
         shoot |= Input.GetButtonDown("Fire2");
