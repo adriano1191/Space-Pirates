@@ -9,8 +9,7 @@ public class Spawner : MonoBehaviour {
     private float spawnCooldown;
     public Transform spawn;
     GameObject spawner;
-    Vector2 movePosition = new Vector2(1f, 1f);
-    float speed = 5f;
+
 
 
     void Start()

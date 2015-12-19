@@ -6,9 +6,6 @@ public class Enemy_Shooting : MonoBehaviour {
     public float shootCooldown;
     public Transform bullet;
     GameObject shoot;
-    Vector2 movePosition = new Vector2(1f, 1f);
-    float speed = 5f;
-
 
     void Start()
     {

@@ -8,8 +8,6 @@ public class Viking_Shooting : MonoBehaviour {
     public Transform bullet_Center;
     public Transform bullet_Right;
     GameObject shoot;
-    Vector2 movePosition = new Vector2(1f, 1f);
-    float speed = 5f;
 
 
     void Start()
