@@ -25,9 +25,9 @@ public class Viking_Shooting : MonoBehaviour {
         if (shootCooldown > shootingRate)
         {
 
-            Instantiate(bullet_Left, new Vector2(transform.position.x + -0.85f, transform.position.y + 0.0f), Quaternion.identity);
-            Instantiate(bullet_Center, new Vector2(transform.position.x + 0f, transform.position.y + 0.0f), Quaternion.identity);
-            Instantiate(bullet_Right, new Vector2(transform.position.x + 0.85f, transform.position.y + 0.0f), Quaternion.identity);
+            Instantiate(bullet_Left, new Vector2(transform.position.x + -0.75f, transform.position.y + -1.25f), Quaternion.identity);
+            Instantiate(bullet_Center, new Vector2(transform.position.x + 0f, transform.position.y + -1.25f), Quaternion.identity);
+            Instantiate(bullet_Right, new Vector2(transform.position.x + 0.72f, transform.position.y + -1.25f), Quaternion.identity);
 
 
             shootCooldown = 0f;
