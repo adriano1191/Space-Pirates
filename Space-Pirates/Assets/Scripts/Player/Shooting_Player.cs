@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Shooting_Player : MonoBehaviour {
 
@@ -16,7 +17,7 @@ public class Shooting_Player : MonoBehaviour {
 	void FixedUpdate () {
 
         shootCooldown += Time.deltaTime;
-        if (Input.GetButtonDown("Fire1") && shootCooldown > shootingRate)
+        if (CrossPlatformInputManager.GetButtonDown("Jump") && shootCooldown > shootingRate)
         {
 
         Instantiate(bullet, new Vector2(transform.position.x + 0.75f, transform.position.y + 0.09f), Quaternion.identity);
