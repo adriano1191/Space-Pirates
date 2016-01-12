@@ -4,7 +4,25 @@ using System.Collections;
 public class Stats_Player : MonoBehaviour {
 
 
-    public int health = 2;
+    public int health;
+    int highscore;
+    int coins;
+
+    void Start()
+    {
+
+        health = PlayerPrefs.GetInt("Health"); // handles case it doesn't exist and provides a default value of zero unless otherwise specified
+
+    }
+
+
+    public void Heal(int addHeal)
+    {
+        health += addHeal;
+        PlayerPrefs.SetInt("Health", health); //Save Highscore OnDisable 
+        PlayerPrefs.Save();
+    }
+
 
     public void Damage(int damageCount)
     {
@@ -21,7 +39,6 @@ public class Stats_Player : MonoBehaviour {
         }
 
     }
-
 
     //dostęp do zmiennej statycznej
     /*
